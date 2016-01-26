@@ -1,7 +1,15 @@
-function Ticket(movieNew, ageRange, timeOf) {
-  this.movieNew = movieNew;
-  this.ageRange = ageRange;
-  this.timeOf = timeOf;
+function Ticket(ticketPrice) {
+  this.ticketPrice = [ticketPrice];
 };
-
-Ticket.prototype.ticketMatinee
+//
+// Ticket.prototype.ticketMatinee = function() {
+//   return //this ticketprice -2
+// }
+//
+// Ticket.prototype.ticketSenior = function() {
+//   return //this ticket price /2
+// }
+//
+// Ticket.prototype.ticketOld = function() {
+//   return //this ticketprice -5
+// }
