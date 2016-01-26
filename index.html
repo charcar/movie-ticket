@@ -5,26 +5,45 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Address Book</title>
+    <title>Movie Ticket</title>
   </head>
   <body>
     <div class="container">
-    <h1>Address Book</h1>
-    <h3>Fill out the form to save info to our addres book!</h3>
+    <h1>Movie Ticket</h1>
+    <h3>How much will your ticket cost?</h3>
 
-      <form id="new-contact">
+      <form id="new-ticket">
 
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="new-first-name">First Name</label>
-            <input type="text" class="form-control" id="new-first-name">
+            <label for="new-age">What age group are you in?</label>
+            <select name="ageCategory">
+              <option value="seniorNo">Adult (0-65)</option>
+              <option value="seniorYes" id="seniorYes">Senior (65+)</option>
+            </select>
+            <br>
+            <label for="new-age">What movie do you want to see?</label>
+            <select name="movieCategory">
+              <option value="newMovie">The Revenant</option>
+              <option value="oldMovie" id="movieOld">Casablanca</option>
+            </select>
+            <br>
+            <label for="new-age">What time would you like to go see the movie?</label>
+            <select name="movieTime">
+              <option value="matineeYes">Matinee</option>
+              <option value="matineeNo">Evening</option>
+            </select>
+            <br>
+            <button class="btn" type="submit">Submit</button>
           </div>
         </div>
 
       </form>
 
         <div class="col-md-6">
+          <ul id="outputPrice">
+          </ul>
         </div>
       </div>
     </div>

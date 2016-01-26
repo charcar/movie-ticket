@@ -1,7 +1,7 @@
 describe('Ticket', function() {
-  it("will make a ticket object.", function() {
-    var testTicket = new Ticket ("ticket1");
-    expect(testTicket.ticketNum).to.equal("ticket1");
+  it("will make a ticket price.", function() {
+    var testTicket = new Ticket (10);
+    expect(testTicket.ticketPrice).to.equal(10);
   });
 });
 
@@ -19,5 +19,10 @@ describe('Price', function() {
   it("will divide ticketPrice by 2.", function() {
     var testPrice = new Price (10);
     expect(testPrice.ticketSenior()).to.equal(5);
-  })
+  });
+
+  it("will subtract ticketPrice by 3.", function() {
+    var testPrice = new Price (8);
+    expect(testPrice.ticketOld()).to.equal(5);
+  });
 });
