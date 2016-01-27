@@ -1,26 +1,33 @@
-function Ticket(ticketPrice) {
-  return this.ticketPrice = ticketPrice;
-};
+function Ticket(ageInput, movieInput, timeInput) {
+  this.ageInput = ageInput;
+  this.movieInput = movieInput;
+  this.timeInput = timeInput;
+  };
 
 function Price(ticketPrice) {
   this.ticketPrice = [ticketPrice];
 };
 
+Ticket.prototype.ticketSenior = function() {
+  if (ageInput >= 65) {
+      console.log(ticketPrice);
+    this.ticketPrice = this.ticketPrice/2;
+    return this.ticketPrice;
 
-
-Price.prototype.ticketMatinee = function() {
-  this.ticketPrice = this.ticketPrice - 2;
-  return this.ticketPrice;
+  };
 };
 
-Price.prototype.ticketSenior = function() {
-  this.ticketPrice = this.ticketPrice/2;
-  return this.ticketPrice;
+Ticket.prototype.ticketOld = function() {
+  if (movieInput = "oldMovie")
+    return this.ticketPrice = this.ticketPrice - 2;
 };
 
-Price.prototype.ticketOld = function() {
+
+Ticket.prototype.ticketMat = function() {
+  if (timeInput = "yesMatinee")
   this.ticketPrice = this.ticketPrice - 3;
-  return this.ticketPrice;
+    console.log(ticketPrice);
+    return
 };
 
 
@@ -31,19 +38,16 @@ $("form#new-ticket").submit(function(event) {
 
 
   var ticketPrice = new Price(10);
-  console.log(ticketPrice);
-  var ageInput = $("option#seniorOld").val();
+  var ageInput = $("input#ageInput").val();
   var movieInput = $("option#movieOld").val();
+  var timeInput = $("option#yesMatinee").val();
 
-  console.log(ageInput);
-
-  if (ageInput = seniorYes) {
-    ticketPrice = ticketPrice.ticketSenior(ticketPrice);
-  } else if (movieInput = movieOld) {
-    ticketPrice = ticketPrice.ticketOld(ticketPrice);
-  } console.log(ticketPrice);
-
+  var newTicket = new Ticket (ageInput,movieInput,timeInput)
+  console.log(newTicket);
+  console.log(ticketPrice);
+  newTicket = newTicket.ticketMat()
+  console.log(newTicket);
 
 $("ul#outputPrice").append("<li>" + ticketPrice + "</li>");
-});
+  });
 });
